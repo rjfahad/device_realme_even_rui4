@@ -62,7 +62,6 @@ PRODUCT_COPY_FILES += \
 
 # Biometrics
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.oplus
 
 TARGET_EXCLUDES_AUDIOFX := true
 
@@ -107,7 +106,6 @@ PRODUCT_PACKAGES += \
 
 # Doze
 PRODUCT_PACKAGES += \
-    OplusDoze
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -187,7 +185,6 @@ PRODUCT_PACKAGES += \
    libkeystore-engine-wifi-hidl \
    libnetutils.vendor
 
-$(call inherit-product, hardware/oplus/oplus-fwk/oplus-fwk.mk)
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -195,7 +192,6 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.1-service-even
 
 # Vendor Log Tag
 include $(DEVICE_PATH)/configs/props/vendor_logtag.mk
@@ -226,7 +222,6 @@ PRODUCT_PACKAGES += \
 
 # Update
 AB_OTA_UPDATER := false
-PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
@@ -239,7 +234,6 @@ PRODUCT_PACKAGES += \
     WifiResOverlayEven \
     TetheringResOverlayEven \
     CarrierConfigOverlayEven \
-    OplusDozeOverlayEven
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -295,7 +289,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.lineage-libperfmgr
+    android.hardware.power-service.mediatek-libperfmgr
 
 PRODUCT_PACKAGES += \
     libmtkperf_client_vendor \
@@ -340,7 +334,6 @@ PRODUCT_PACKAGES += \
     init.sensor_1_0.rc \
     init.target.rc \
     ueventd.mtk.rc \
-    ueventd.oplus.rc
 
 # Fastboot
 PRODUCT_PACKAGES += \
@@ -372,13 +365,8 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek \
-    hardware/oplus \
-    hardware/lineage/compat \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/mediatek/libmtkperf_client \
-    hardware/mediatek/aidl/vibrator \
-    hardware/lineage/interfaces/power-libperfmgr \
     $(DEVICE_PATH)
 
 # Thermal
@@ -388,7 +376,6 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.oplus
 
 # USB
 PRODUCT_PACKAGES += \
